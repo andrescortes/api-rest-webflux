@@ -1,0 +1,29 @@
+config:
+  uploads:
+    path: D://uploads//
+  base:
+    endpoint: /api/products
+spring:
+  data:
+    mongodb:
+      database: test
+      port: 27017
+      host: localhost
+  application:
+    name: service-products
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
+server:
+  port: 8002
